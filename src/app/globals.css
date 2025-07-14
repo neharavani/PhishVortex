@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-size: cover; /* Ensure the background covers the whole page */
+  background-position: center;
+  background-attachment: fixed; /* Keeps background fixed while scrolling */
+}
+
+main {
+  flex: 1; /* Pushes the footer to the bottom */
+}
+
+footer {
+  width: 100%;
+}
+
